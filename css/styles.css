@@ -217,7 +217,8 @@ ul {
 }
 
 .section .subject-title,
-.section .team-title {
+.section .team-title,
+.clients-title {
   margin-bottom: 50px;
 
   color: var(--title-text-color);
