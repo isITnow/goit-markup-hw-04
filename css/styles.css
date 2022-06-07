@@ -134,11 +134,20 @@ ul {
 
 /* шапка */
 
-.section.hero {
+.hero {
+  max-width: 1600px;
+  height: 600px;
   padding-top: 200px;
-  padding-bottom: 200px;
-  background-color: var(--background-color);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #C4C4C4;
   text-align: center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)),
+    url("../images/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero .headline {
@@ -187,16 +196,17 @@ ul {
   display: flex;
 }
 
-.specifics-list .specifics-item {
+.specifics-item {
   margin-right: 30px;
   width: calc((100% - 90px) / 4);
 }
 
-.specifics-list .specifics-item:last-child {
+.specifics-item:last-child {
   margin-right: 0;
 }
 
-.specifics-list .specifics-title {
+.specifics-title,
+.social-title {
   margin-bottom: 10px;
 
   color: var(--title-text-color);
@@ -205,7 +215,7 @@ ul {
   text-transform: uppercase;
 }
 
-.specifics-list .specifics-desc {
+.specifics-desc {
   font-size: 14px;
   line-height: 1.71;
 }
@@ -277,12 +287,33 @@ ul {
   text-align: center;
 }
 
+/* Постоянные клиенты */
+
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients-link {
+  display: block;
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+}
+
 /* подвал */
 
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--background-color);
+}
+
+.footer .container {
+  display: flex;
+  align-items: baseline;
 }
 
 .footer .adress-list {
@@ -312,6 +343,35 @@ ul {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+}
+
+.social {
+  margin-left: 70px;
+  margin-right: auto;
+}
+
+.social-title {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--totall-white);
+}
+
+.social-list {
+  display: flex;
+}
+
+.social-item+.social-item {
+  margin-left: 10px;
+}
+
+.social-item {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* !!страница портфолио!! */
@@ -349,6 +409,9 @@ ul {
 .filter .button:focus {
   color: var(--totall-white);
   background-color: var(--accent-color);
+  box-shadow: 0px 2px 2px 0px #0000001F;
+  box-shadow: 0px 1px 2px 0px #00000014;
+  box-shadow: 0px 3px 1px 0px #0000001A;
 }
 
 /* Проекты */
