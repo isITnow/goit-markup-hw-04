@@ -115,7 +115,7 @@ ul {
 }
 
 .contact-item+.contact-item {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .contact-link {
@@ -132,11 +132,17 @@ ul {
 
 .contact-icon {
   margin-right: 10px;
+  fill: var(--icon-color);
 }
 
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
+}
+
+.contact-link:hover .contact-icon,
+.contact-link:focus .contact-icon {
+  fill: var(--accent-color);
 }
 
 /* шапка */
@@ -177,6 +183,7 @@ ul {
 
   color: var(--totall-white);
   background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -210,6 +217,18 @@ ul {
 
 .specifics-item:last-child {
   margin-right: 0;
+}
+
+.thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+
+  border-radius: 4px;
+  background-color: var(--light-background);
 }
 
 .specifics-title,
@@ -259,9 +278,18 @@ ul {
   display: flex;
 }
 
-.team-list .item {
+.team-item {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
+  background-color: var(--totall-white);
+  box-shadow: 0px 2px 1px 0px #00000033;
+  box-shadow: 0px 1px 1px 0px #00000024;
+  box-shadow: 0px 1px 3px 0px #0000001F;
+  border-radius: 4px;
+}
+
+.team-item:last-child {
+  margin-right: 0;
 }
 
 .team-pic,
@@ -269,16 +297,11 @@ ul {
   display: block;
 }
 
-.team-list .item:last-child {
-  margin-right: 0;
-}
-
 .team-info {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
 }
 
-.team-list .team-name {
+.team-name {
   margin-bottom: 10px;
 
   color: var(--title-text-color);
@@ -288,11 +311,44 @@ ul {
   text-align: center;
 }
 
-.team-list .team-desc {
+.team-desc {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 16px;
 }
+
+.team-social {
+  display: flex;
+}
+
+.team-social-item+.team-social-item {
+  margin-left: 10px;
+}
+
+.team-social-link {
+  display: inline-block;
+  padding: 12px;
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+}
+
+.team-social .social-icon {
+  fill: var(--icon-color);
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.team-social-link:hover .social-icon,
+.team-social-link:focus .social-icon {
+  fill: var(--totall-white);
+}
+
 
 /* Постоянные клиенты */
 
@@ -308,7 +364,6 @@ ul {
 
   width: 170px;
   height: 92px;
-  /* padding: 16px 32px; */
 
   border: 1px solid var(--icon-color);
   border-radius: 4px;
