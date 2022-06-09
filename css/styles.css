@@ -72,6 +72,11 @@ ul {
 
 /* site-nav */
 
+.nav {
+  display: flex;
+  align-items: center;
+}
+
 .site-nav-list {
   display: flex;
   margin-left: 93px;
@@ -104,23 +109,19 @@ ul {
   color: var(--accent-color);
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-}
-
 .contact {
   display: flex;
   margin-left: auto;
 }
 
-.contact-item+.contact-item {
-  margin-left: 30px;
+.contact-item:not(:last-child) {
+  margin-right: 30px;
 }
 
-.contact-link {
+.contact .contact-link {
   display: flex;
   align-items: center;
+  padding: 32px 0;
   color: var(--primery-tect-color);
   font-weight: 500;
   font-size: 14px;
@@ -252,8 +253,8 @@ ul {
   padding-top: 0;
 }
 
-.section .subject-title,
-.section .team-title,
+.subject-title,
+.team-title,
 .client-title {
   margin-bottom: 50px;
 
@@ -282,9 +283,9 @@ ul {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
   background-color: var(--totall-white);
-  box-shadow: 0px 2px 1px 0px #00000033;
-  box-shadow: 0px 1px 1px 0px #00000024;
-  box-shadow: 0px 1px 3px 0px #0000001F;
+  box-shadow: 0px 2px 2px 1px #00000033;
+  box-shadow: 0px 1px 2px 1px #00000024;
+  box-shadow: 0px 1px 4px 1px #0000001F;
   border-radius: 4px;
 }
 
@@ -322,8 +323,8 @@ ul {
   display: flex;
 }
 
-.team-social-item+.team-social-item {
-  margin-left: 10px;
+.team-social-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .team-social-link {
@@ -442,8 +443,8 @@ ul {
   display: flex;
 }
 
-.social-item+.social-item {
-  margin-left: 10px;
+.social-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-link {
@@ -528,9 +529,9 @@ ul {
 
 .project-item:hover,
 .project-item:focus {
-  box-shadow: 1px 4px 6px 0px #00000029;
-  box-shadow: 0px 4px 4px 0px #0000000F;
-  box-shadow: 0px 1px 1px 0px #0000001F;
+  box-shadow: 1px 4px 7px 1px #00000029;
+  box-shadow: 0px 4px 5px 1px #0000000F;
+  box-shadow: 0px 1px 2px 0px #0000001F;
 }
 
 .project-info {
