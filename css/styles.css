@@ -87,7 +87,7 @@ ul {
 }
 
 .nav-link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -253,6 +253,11 @@ ul {
   padding-top: 0;
 }
 
+.subject-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 .subject-title,
 .team-title,
 .client-title {
@@ -262,11 +267,6 @@ ul {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-}
-
-.subject-list {
-  display: flex;
-  justify-content: space-between;
 }
 
 /* наша команда */
